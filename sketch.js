@@ -27,7 +27,7 @@ textContent = para1.toUpperCase();
 
 
 function preload() {
-  optimaFont = loadFont('OptimaMedium.ttf');
+  optimaFont = loadFont('optimaMedium.ttf');
 }
 
 function setup() {
