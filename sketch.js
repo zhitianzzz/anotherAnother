@@ -141,12 +141,12 @@ function processKeypoints() {
     ];
 
     // Draw the keypoints
-    for (let i = 0; i < fingers.length; i += 1) {
-      let finger = fingers[i];
-      fill(finger.color);
-      noStroke();
-      ellipse(finger.points[3][0], finger.points[3][1], 10, 10);
-    }
+    // for (let i = 0; i < fingers.length; i += 1) {
+    //   let finger = fingers[i];
+    //   fill(finger.color);
+    //   noStroke();
+    //   ellipse(finger.points[3][0], finger.points[3][1], 10, 10);
+    // }
 
     // Get the current position of the thumb tip
     thumbCurrPos = fingers[0].points[3]; // Thumb tip
