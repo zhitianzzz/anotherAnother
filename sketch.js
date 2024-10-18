@@ -40,6 +40,9 @@ function setup() {
   let textContent = para1.toUpperCase();
   let points = [];
 
+  // Tracking of the text
+  let tracking = 1.8;
+
   // Split the text into lines and create points for each line
   let lines = textContent.split('\n');
   let yOffset = 0;
@@ -50,13 +53,18 @@ function setup() {
 
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];
+    let xOffset = 2;
 
     // For the font size for the particle text
-    let linePoints = optimaFont.textToPoints(line, 50, yCenterOffset + yOffset, 64, { 
-      sampleFactor: 0.13 // Increase sampleFactor to reduce the number of particles
-    });
-    points = points.concat(linePoints);
-    yOffset += 90; // For leading
+    for (let j = 0; j < line.length; j++) {
+      let char = line[j];
+      let charPoints = optimaFont.textToPoints(char, 50 + xOffset, yCenterOffset + yOffset, 64, { 
+        sampleFactor: 0.13 // Increase sampleFactor to reduce the number of particles
+      });
+      points = points.concat(charPoints);
+      xOffset += textWidth(char) + tracking; // Adjust xOffset for tracking
+    }
+    yOffset += 98; // For leading
   }
 
   // Add more particles for each character
@@ -67,9 +75,9 @@ function setup() {
 
     // Add fewer random particles for each character
     for (let j = 0; j < 2; j++) { // Reduce the number of additional particles
-      let offsetX = random(-5, 5); // Reduce the offset range
-      let offsetY = random(-5, 5); 
-      let vehicle = new Vehicle(pt.x + offsetX, pt.y + offsetY);
+      let dotsOffsetX = random(-5, 5); // Reduce the offset range
+      let dotsOffsetY = random(-5, 5); 
+      let vehicle = new Vehicle(pt.x + dotsOffsetX, pt.y + dotsOffsetY);
       vehicles.push(vehicle);
     }
   }
@@ -77,7 +85,8 @@ function setup() {
   // Setup handpose
   video = createCapture(VIDEO);
   video.size(windowWidth, windowHeight);
-
+  
+  //draw video capture feed as image inside p5 canvas
   handpose = ml5.handpose(video, modelReady);
 
   // This sets up an event that fills the global variable "predictions"
@@ -132,12 +141,12 @@ function processKeypoints() {
     ];
 
     // Draw the keypoints
-    // for (let i = 0; i < fingers.length; i += 1) {
-    //   let finger = fingers[i];
-    //   fill(finger.color);
-    //   noStroke();
-    //   ellipse(finger.points[3][0], finger.points[3][1], 10, 10);
-    // }
+    for (let i = 0; i < fingers.length; i += 1) {
+      let finger = fingers[i];
+      fill(finger.color);
+      noStroke();
+      ellipse(finger.points[3][0], finger.points[3][1], 10, 10);
+    }
 
     // Get the current position of the thumb tip
     thumbCurrPos = fingers[0].points[3]; // Thumb tip
@@ -284,6 +293,9 @@ function updateTextContent() {
   vehicles = [];
   let points = [];
 
+  // Tracking of the text
+  let tracking = 1.8;
+
   // Split the text into lines and create points for each line
   let lines = textContent.split('\n');
   let yOffset = 0;
@@ -294,13 +306,18 @@ function updateTextContent() {
 
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];
+    let xOffset = 2;
 
     // For the font size for the particle text
-    let linePoints = optimaFont.textToPoints(line, 50, yCenterOffset + yOffset, 64, { 
-      sampleFactor: 0.13 // Increase sampleFactor to reduce the number of particles
-    });
-    points = points.concat(linePoints);
-    yOffset += 90; // For leading
+    for (let j = 0; j < line.length; j++) {
+      let char = line[j];
+      let charPoints = optimaFont.textToPoints(char, 50 + xOffset, yCenterOffset + yOffset, 64, { 
+        sampleFactor: 0.13 // Increase sampleFactor to reduce the number of particles
+      });
+      points = points.concat(charPoints);
+      xOffset += textWidth(char) + tracking; // Adjust xOffset for tracking
+    }
+    yOffset += 98; // For leading
   }
 
   // Add more particles for each character
@@ -311,9 +328,9 @@ function updateTextContent() {
 
     // Add fewer random particles for each character
     for (let j = 0; j < 2; j++) { // Reduce the number of additional particles
-      let offsetX = random(-5, 5); // Reduce the offset range
-      let offsetY = random(-5, 5); 
-      let vehicle = new Vehicle(pt.x + offsetX, pt.y + offsetY);
+      let dotsOffsetX = random(-5, 5); // Reduce the offset range
+      let dotsOffsetY = random(-5, 5); 
+      let vehicle = new Vehicle(pt.x + dotsOffsetX, pt.y + dotsOffsetY);
       vehicles.push(vehicle);
     }
   }
