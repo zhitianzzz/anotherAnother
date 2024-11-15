@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>anotherAnother</title>
+  <!-- p5.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <!-- ml5.js library -->
+  <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+  <!-- p5.js sketch file -->
+  <script src="sketch.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <audio autoplay loop id="roomBG">
+    <source src="roomBG.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- quietHall is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=00008086 -->
+  <audio autoplay loop id="quietHall">
+    <source src="quietHall.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- houseDoorSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07027120 -->
+  <audio id="houseDoorSound" src="houseDoor.mp3" preload="auto"></audio> 
+
+  <!-- fridgeSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07027216 -->
+  <audio id="fridgeSound" src="fridge.mp3" preload="auto"></audio>
+
+  <!-- fridgeSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07059082 -->
+  <audio id="curtainSound" src="curtain.mp3" preload="auto"></audio>
+  
+  <!-- tapSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07002116 -->
+  <audio id="tapSound" src="tapDrip.mp3" preload="auto"></audio>
+
+  <!-- streetSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07055063 -->
+  <audio id="streetSound" src="street.mp3" preload="auto"></audio>
+
+  <!-- washingMachineSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07055063 -->
+  <audio id="washingMachineSound" src="washingMachine.mp3" preload="auto"></audio>
+
+  <!-- lightOnSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07027125 -->
+  <audio id="lightOnSound" src="lightOn.mp3" preload="auto"></audio>
+
+  <!-- footstepsSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07037050 -->
+  <audio id="footstepsSound" src="footsteps.mp3" preload="auto"></audio>
+
+  <!-- oldWindowSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07027116 -->
+  <audio id="oldWindowSound" src="oldWindow.mp3" preload="auto"></audio>
+
+  <!-- tickingSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07022257 -->
+  <audio id="tickingSound" src="ticking.mp3" preload="auto"></audio>
+
+  <!-- clockSound is sourced from BBC Sound Effect: -->
+  <!-- https://sound-effects.bbcrewind.co.uk/search?q=07070153 -->
+  <audio id="clockSound" src="clock.mp3" preload="auto"></audio>
+</body>
+
+</html>
