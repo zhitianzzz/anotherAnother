@@ -19,14 +19,14 @@
   <!-- <audio autoplay loop id="roomBG">
     <source src="audioAll/roomBG.mp3" type="audio/mpeg">
   </audio> -->
-  <audio id="roomBG" src="audioAll/roomBG.mp3" preload="auto" loop muted></audio>
+  <audio id="roomBG" src="audioAll/roomBG.mp3" preload="auto" loop></audio>
 
   <!-- quietHall is sourced from BBC Sound Effect: -->
   <!-- https://sound-effects.bbcrewind.co.uk/search?q=00008086 -->
   <!-- <audio autoplay loop id="quietHall">
     <source src="audioAll/quietHall.mp3" type="audio/mpeg">
   </audio> -->
-  <audio id="quietHall" src="audioAll/quietHall.mp3" preload="auto" loop muted></audio>
+  <audio id="quietHall" src="audioAll/quietHall.mp3" preload="auto" loop></audio>
 
   <!-- houseDoorSound is sourced from BBC Sound Effect: -->
   <!-- https://sound-effects.bbcrewind.co.uk/search?q=07027120 -->
@@ -72,18 +72,6 @@
   <!-- https://sound-effects.bbcrewind.co.uk/search?q=07070153 -->
   <audio id="clockSound" src="audioAll/clock.mp3" preload="auto"></audio>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const roomBG = document.getElementById('roomBG');
-      const quietHall = document.getElementById('quietHall');
-
-      // Unmute and play audio after the page loads
-      roomBG.muted = false;
-      roomBG.play();
-      quietHall.muted = false;
-      quietHall.play();
-    });
-  </script>
 </body>
 
 </html>
