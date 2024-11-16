@@ -38,8 +38,8 @@ const para11 = "12 AM.\nYou feel like you’ve done nothing,\nAnd the fluorescen
 textContent = paraInstruction0.toUpperCase();
 
 // For sound effects
-const roomBG;
-const quietHall;
+var roomBG;
+var quietHall;
 let fridgeSound;
 let tapSound;
 let streetSound;
