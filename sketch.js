@@ -66,13 +66,9 @@ function setup() {
   // Set the volume for the background sounds
   roomBG = document.getElementById('roomBG');
   roomBG.volume = 0.5; 
-  roomBG.muted = false; 
-  roomBG.play(); 
 
   quietHall = document.getElementById('quietHall');
   quietHall.volume = 0.6; 
-  quietHall.muted = false; 
-  quietHall.play();
 
 
   // Start sound at 0 volume
@@ -186,6 +182,13 @@ function draw() {
     v.seekMouse(cursorX, cursorY);
     v.update();
     v.show();
+  }
+
+  if (roomBG) { 
+    roomBG.play();
+  }
+  if (quietHall) { 
+    quietHall.play();
   }
 }
 
