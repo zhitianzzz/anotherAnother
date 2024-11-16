@@ -13,8 +13,8 @@ Reveal the next section of the work.
 
 - A preferably high-performance laptop or PC [this will allow faster and smoother loading]
 
-- A working webcam,
+- A working webcam
   
 - A speaker
 
-- Mobile devices and tablets are not recommended for viewing this work [the website is highly likely not to load all its functions on those devices]
++ Mobile devices and tablets are not recommended for viewing this work [the website is highly likely not to load all its functions on those devices]
