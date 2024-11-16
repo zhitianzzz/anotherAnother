@@ -38,6 +38,8 @@ const para11 = "12 AM.\nYou feel like you’ve done nothing,\nAnd the fluorescen
 textContent = paraInstruction0.toUpperCase();
 
 // For sound effects
+let roomBG;
+let quietHall;
 let fridgeSound;
 let tapSound;
 let streetSound;
@@ -62,8 +64,10 @@ function setup() {
   textFont(optimaFont); 
 
   // Set the volume for the background sounds
-  // document.getElementById('quietHall').volume = 0.6; 
-  // document.getElementById('roomBG').volume = 0.5; 
+  roomBG = document.getElementById('roomBG');
+  roomBG.volume = 0.5; 
+  quietHall = document.getElementById('quietHall');
+  document.getElementById('quietHall').volume = 0.6; 
 
   // Start sound at 0 volume
   fridgeSound = document.getElementById('fridgeSound');
