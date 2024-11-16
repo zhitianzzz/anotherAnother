@@ -72,6 +72,18 @@
   <!-- https://sound-effects.bbcrewind.co.uk/search?q=07070153 -->
   <audio id="clockSound" src="audioAll/clock.mp3" preload="auto"></audio>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const roomBG = document.getElementById('roomBG');
+      const quietHall = document.getElementById('quietHall');
+
+      // Unmute and play audio after the page loads
+      roomBG.muted = false;
+      roomBG.play();
+      quietHall.muted = false;
+      quietHall.play();
+    });
+  </script>
 </body>
 
 </html>
